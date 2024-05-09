@@ -29,6 +29,8 @@
         <img class="rez__img" src="../../static/img/planet_medium.svg" alt="">
         <span>Hasil kamu {{result}} kWh</span>
         <span>Efisiensi energi rumah kamu rata-rata!</span>
+        <span>Apakah kamu ingin membuat dunia menjadi tempat yang lebih ramah lingkungan? Isi formulir dan kita akan membuat bangunan ramah lingkungan untuk kamu!</span>
+        <a href="{{ url_for('form') }}" class="main__link">Isi formulir</a>
         {%elif result >= 300%}
         <img class="rez__img" src="../../static/img/planet_bad.svg" alt="">
         <span>Hasil kamu {{result}} kWh</span>
