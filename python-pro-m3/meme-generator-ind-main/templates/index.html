@@ -37,6 +37,9 @@
               <option value="logo.svg" {% if selected_image == 'logo.svg' %}selected{% endif %}>Pilih meme</option>
               <option value="meme_1.jpg" {% if selected_image == 'meme_1.jpg' %}selected{% endif %}>Gadis bencana</option>
               <option value="meme_2.jpg" {% if selected_image == 'meme_2.jpg' %}selected{% endif %}>Dua tombol</option>
+              <option value="meme_3.jpg" {% if selected_image == 'meme_3.jpg' %}selected{% endif %}>Doggy</option>
+              <option value="meme_4.jpg" {% if selected_image == 'meme_4.jpg' %}selected{% endif %}>Anak kecil</option>
+              <option value="meme_5.jpg" {% if selected_image == 'meme_5.jpg' %}selected{% endif %}>Rambut kuning</option>
               <!--Tugas #1. Tambahkan meme baru di sini -->
 
 
@@ -55,6 +58,7 @@
             <select name="color-selector" id="color-selector">
               <option value="white" {% if selected_color == 'white' %}selected{% endif %}>Putih</option>
               <option value="black" {% if selected_color == 'black' %}selected{% endif %}>Hitam</option>
+              <option value="red" {% if selected_color == 'red' %}selected{% endif %}>Merah</option>
               <!--Tambahan.tugas #1. Tambahkan warna baru di sini -->
 
 
@@ -74,14 +78,16 @@
     </div>
     <div class="meme-block" id="memeBlock">
       
-      <p class="text_top" style="<!-- Tugas #3. Memindahkan variabel ke CSS -->">
+      <p class="text_top" style="color: {{selected_color}}; top: {{text_top_y}}">
         <!-- Tugas #2. Menempatkan variabel dengan teks -->
+        {{ text_top }}
       </p>
 
       <img class="meme" src="{{ url_for('serve_images', path=selected_image) }}" alt="{{ selected_image }}">
 
-      <p class="text_bottom" style="<!-- Tugas #3. Memindahkan variabel ke CSS -->">
+      <p class="text_bottom" style="color: {{selected_color}}; bottom: {{text_bottom_y}}">
         <!-- Tugas #2. Menempatkan variabel dengan teks -->
+        {{ text_bottom }}
       </p>
     </div>
     {% endblock %}
