@@ -8,21 +8,20 @@
   >
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../static/css/style.css">
-  <title>Pustaka programmer</title>
+  <title>Jurnal programmer</title>
 </head>
 <body>
   <header class="header">
     <img src="../static/img/logo.svg" alt="logo" width="30" height="30">
     <ul class="main-list">
         <li class="list__item">
-          <a href="">
             <img src="../static/img/login.svg" alt="login" width="20" height="20">
-          </a>
+        </li>
     </ul>
   </header>
   <main>
     {% block content %}
-    <h1 class="main__title">Entri saya</h1>
+    <h1 class="main__title">Catatan-catatan saya</h1>
     <ul class="cards-list">
       {% for el in cards%}
       <li class="card">
